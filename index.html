@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('./image/background.jpg'); /* Change path as needed */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Optional: add a semi-transparent overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.2); /* Adjust opacity/color as needed */
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> My  Portfolio</h1>
+  </header>
+
+  <section id="home">
+    <h2>Home</h2>
+    <div class="cards">
+      <div class="card" data-modal="profileModal">My Profile</div>
+      <div class="card" data-modal="hobbiesModal">My Hobbies</div>
+      <div class="card" data-modal="contactModal">My Contact</div>
+    </div>
+  </section>
+
+  <div id="profileModal" class="modal">
+  <div class="modal-content" style="max-width: 500px; margin: auto; background-color: #fff; padding: 20px; position: relative; border-radius: 8px; text-align: center;">
+    <span class="close" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;">&times;</span>
+    <h3>My Profile</h3>
+    
+    <img 
+      src="./image/mee.jpeg" 
+      alt="profile"
+      style="width: 100%; height: auto; max-height: 300px; border-radius: 8px; object-fit: cover;"
+    >
+    
+    <div class="info" style="text-align: left; margin-top: 15px;">
+      <p><strong>Name:</strong> Dyen Robles</p>
+      <p><strong>Age:</strong> 19</p>
+      <p><strong>Birthday:</strong> July 7, 2006</p>
+      <p><strong>Address:</strong> Barangay Payompon, Mamburao, Occidental Mindoro</p>
+      <p><strong>Birthplace:</strong> Poblacion 2, Victoria Oriental Mindoro</p>
+    </div>
+  </div>
+</div>
+
+
+  <div id="hobbiesModal" class="modal">
+  <div class="modal-content" style="max-width: 500px; margin: auto; background-color: #fff; padding: 20px; position: relative; border-radius: 8px; text-align: left;">
+    <span class="close" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;">&times;</span>
+    <h3 style="text-align: center;">My Hobbies</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+        <img src="./image/basketball.webp" alt="Playing Basketball" style="width: 100px; height: auto; border-radius: 8px;">
+        <span>Playing Basketball</span>
+      </li>
+      <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+        <img src="./image/music.jpg" alt="Listening to Music" style="width: 100px; height: auto; border-radius: 8px;">
+        <span>Listening to Music</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Dyen Robles Contact</h3>
+      <p><strong>Email:</strong> mcdyenrobles@gmail.com</p>
+      <p><strong>Phone:</strong> 09541063205</p>
+      <p><strong>Facebook:</strong> Mc Dyen Robles</p>
+
+      <p><strong>GitHub:</strong> 
+        <a href="https://github.com/johnarolsl-crypto/John-Arols-Lopez-Portfolio" target="_blank" class="github-link">
+          Visit my GitHub
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
